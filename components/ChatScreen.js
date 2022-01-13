@@ -36,8 +36,8 @@ const ChatScreen = ({chat, messages}) => {
     }, [router.query.id]);
 
     const showMessages = () => {
-        scrollToBottom();
         if(messagesSnapshot) {
+            scrollToBottom();
             return messagesSnapshot.docs.map((message) => {
                 return <Message
                 key = {message.id}
